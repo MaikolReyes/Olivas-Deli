@@ -1,15 +1,13 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-primary: "Lato", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+  --color-primary: #c7aac4;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +17,42 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  scroll-behavior: smooth;
 }
+
+/* Flechas Swiper visibles */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 42px;
+  height: 42px;
+  color: #c7aac4;
+  border-radius: 9999px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+/* Tamaño del ícono */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Posición */
+
+/* body {
+  font-family: "Montserrat", sans-serif;
+} */
+
+/* body {
+  font-family: "Open Sans", sans-serif;
+} */
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* body {
+  font-family: "Poppins", sans-serif;
+} */

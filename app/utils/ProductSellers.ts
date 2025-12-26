@@ -1,0 +1,58 @@
+export const ProductSellers = [
+    {
+        id: 1,
+        category: 'Tartas',
+        title: 'Tarta de Frutillas (24 cm)',
+        price: '$30.000',
+        image: '/postre.png',
+    },
+    {
+        id: 2,
+        category: 'Tartas',
+        title: 'Lemon pie (24 cm)',
+        price: '$30.000',
+        image: '/brownie.png',
+    },
+    {
+        id: 3,
+        category: 'Tartas',
+        title: 'Tarta de Ricota (24 cm)',
+        price: '$30.000',
+        image: '/brownie.png',
+    },
+    {
+        id: 4,
+        category: 'Tartas',
+        title: 'Brownie con DDL (24 cm)',
+        price: '$30.000',
+        image: '/postre.png',
+    },
+    {
+        id: 5,
+        category: 'Cookies',
+        title: 'Caja de Cookies Variadas (6u)',
+        price: '$18.000',
+        image: '/postre.png',
+    },
+    {
+        id: 6,
+        category: 'Panes',
+        title: 'Pan Integral Artesanal',
+        price: '$8.500',
+        image: '/lemon-pie.png',
+    },
+    {
+        id: 7,
+        category: 'Cupcakes',
+        title: 'Caja de Cupcakes (6u)',
+        price: '$24.000',
+        image: '/postre.png',
+    },
+    {
+        id: 8,
+        category: 'Muffins',
+        title: 'Caja de Muffins (6u)',
+        price: '$20.000',
+        image: '/postre.png',
+    },
+];
