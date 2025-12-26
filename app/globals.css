@@ -21,24 +21,22 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Flechas Swiper visibles */
-.swiper-button-next,
-.swiper-button-prev {
+.swiper .swiper-button-next,
+.swiper .swiper-button-prev {
   width: 42px;
   height: 42px;
-  color: #c7aac4;
-  border-radius: 9999px;
+  color: white;
+  border-radius: 20px;
+  background: #c7aac4;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 50;
 }
 
-/* Tamaño del ícono */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 16px;
-  font-weight: bold;
+.swiper .swiper-button-next::after,
+.swiper .swiper-button-prev::after {
+  font-size: 14px;
+  font-weight: 700;
 }
-
 /* Posición */
 
 /* body {

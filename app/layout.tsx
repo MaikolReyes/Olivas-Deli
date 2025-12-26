@@ -1,6 +1,8 @@
 import { Lato, Montserrat, Open_Sans, Poppins } from "next/font/google";
 import Navbar from "./components/Navbar";
 import type { Metadata } from "next";
+import 'swiper/css';
+import 'swiper/css/navigation';
 import "./globals.css";
 // app/layout.tsx
 import '@fortawesome/fontawesome-svg-core/styles.css';

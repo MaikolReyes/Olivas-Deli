@@ -2,7 +2,7 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-import "swiper/css";
+
 
 export default function HeroCarousel() {
     return (
@@ -10,7 +10,7 @@ export default function HeroCarousel() {
             <Swiper
                 modules={[Autoplay]}
                 autoplay={{
-                    delay: 3000,
+                    delay: 5000,
                     disableOnInteraction: false,
                 }}
                 loop
@@ -37,7 +37,7 @@ export default function HeroCarousel() {
             {/* Contenido fijo */}
             <div className="absolute inset-0 z-20 flex items-center justify-center text-white text-center px-4">
                 <div>
-                    <h1 className="text-4xl md:text-6xl font-bold w-2/4 mx-auto">
+                    <h1 className="text-4xl md:text-6xl font-bold lg:w-2/4 mx-auto">
                         Productos Artesanales:
                         Catering, panificados, postres y más.
                     </h1>
