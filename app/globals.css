@@ -23,11 +23,10 @@ html {
 
 .swiper .swiper-button-next,
 .swiper .swiper-button-prev {
-  width: 42px;
-  height: 42px;
+  width: 35px;
+  height: 35px;
   color: white;
   border-radius: 20px;
-  background: #c7aac4;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 50;
 }

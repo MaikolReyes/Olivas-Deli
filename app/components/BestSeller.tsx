@@ -34,7 +34,7 @@ export const BestSeller = () => {
                 }}
             >
                 {ProductSellers.map((productSeller) => (
-                    <SwiperSlide key={productSeller.id} className='bg-primary'>
+                    <SwiperSlide key={productSeller.id}>
                         <ProductCard product={productSeller} />
                     </SwiperSlide>
                 ))}
