@@ -48,7 +48,7 @@ export default function AboutUs() {
                 <div className="relative">
                     <div className="absolute -top-6 -left-6 w-full h-full rounded-2xl bg-primary/30" />
                     <Image
-                        src="/lemon-pie.png"
+                        src="/postres/lemon-pie.png"
                         alt="Pastelería artesanal"
                         width={600}
                         height={600}
