@@ -26,7 +26,7 @@ export default function ProductCard({ product }: Props) {
           alt={product.title}
           width={400}
           height={300} // 72 * 4
-          className="object-cover"
+          className="object-cover h-64"
         />
 
         {product.badge && (
@@ -47,7 +47,7 @@ export default function ProductCard({ product }: Props) {
         <p className="text-sm mt-2 font-semibold">{product.price}</p>
 
         <a
-          href="https://wa.me/message/SQJNXUCOW5BSJ1"
+          href="https://api.whatsapp.com/message/SQJNXUCOW5BSJ1?autoload=1&app_absent=0&utm_source=ig"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-4 px-4 py-1 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition"

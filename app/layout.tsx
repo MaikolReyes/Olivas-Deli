@@ -1,15 +1,14 @@
 import { Lato, Montserrat, Open_Sans, Poppins } from "next/font/google";
-import Navbar from "./components/Navbar";
+import { GoogleAnalytics } from "./components/GoogleAnalytics";
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next";
-import 'swiper/css';
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
 import 'swiper/css/navigation';
 import "./globals.css";
-// app/layout.tsx
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from '@fortawesome/fontawesome-svg-core';
-import Footer from "./components/Footer";
-import { GoogleAnalytics } from "./components/GoogleAnalytics";
+import 'swiper/css';
 
 config.autoAddCss = false;
 

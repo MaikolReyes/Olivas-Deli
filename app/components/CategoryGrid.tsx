@@ -26,7 +26,8 @@ export default function CategoriesGrid() {
 
                         {/* Overlay */}
                         <div
-                            className={`absolute inset-0 ${cat.overlayColor} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                            className={`absolute inset-0 ${cat.overlayColor} group-hover:opacity-100 transition-opacity duration-300 opacity-80 md:opacity-0 md:group-hover:opacity-100
+`}
                         />
 
                         {/* Texto */}
