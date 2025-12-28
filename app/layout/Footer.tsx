@@ -11,7 +11,7 @@ export default function Footer() {
                     <h3 className="text-2xl font-bold text-gray-800 mb-3">
                         Olivas Deli
                     </h3>
-                    <p className="text-sm leading-relaxed w-2/4">
+                    <p className="text-sm leading-relaxed w-2/4 font-secondary">
                         Pastelería artesanal y productos caseros elaborados con ingredientes
                         de primera calidad. Cada detalle hecho con amor.
                     </p>
@@ -23,7 +23,7 @@ export default function Footer() {
                     <h4 className="font-semibold text-gray-800 mb-3">
                         Contacto
                     </h4>
-                    <ul className="space-y-2 text-sm">
+                    <ul className="space-y-2 text-sm font-secondary">
                         <li>📍 San Martin, Buenos Aires</li>
                         <li>📞 +54 11 2396-3021</li>
                         <li>✉️ camilaceciliapellegrini@gmail.com</li>

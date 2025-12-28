@@ -18,7 +18,7 @@ interface Props {
 
 export default function ProductCard({ product }: Props) {
   return (
-    <div className="bg-white border border-primary rounded-lg h-full overflow-hidden" id='productos'>
+    <div className="bg-white border border-primary rounded-lg h-full overflow-hidden">
       {/* Imagen */}
       <div className="relative">
         <Image
@@ -38,19 +38,19 @@ export default function ProductCard({ product }: Props) {
 
       {/* Contenido */}
       <div className="p-4 text-center">
-        <p className="text-sm text-gray-500">{product.category}</p>
+        <p className="text-sm text-gray-500 font-secondary">{product.category}</p>
 
-        <h3 className="font-medium mt-1 leading-tight">
+        <h3 className="font-secondary font-medium mt-1 leading-tight">
           {product.title}
         </h3>
 
-        <p className="text-sm mt-2 font-semibold">{product.price}</p>
+        <p className="text-sm mt-2 font-semibold font-secondary">{product.price}</p>
 
         <a
           href="https://api.whatsapp.com/message/SQJNXUCOW5BSJ1?autoload=1&app_absent=0&utm_source=ig"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block mt-4 px-4 py-1 border border-primary text-primary rounded-full text-sm hover:bg-primary hover:text-white transition"
+          className="font-secondary inline-block mt-4 px-4 py-1 border border-primary  text-[#3a1d35] rounded-full text-sm hover:bg-primary hover:text-white transition"
         >
           Pedir por WhatsApp
         </a>

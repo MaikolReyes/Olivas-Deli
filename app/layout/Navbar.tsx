@@ -41,10 +41,10 @@ export default function Navbar() {
                             <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">Inicio</a>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#productos">Productos</a>
+                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#categorias">Categorías</a>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#categorias">Categorías</a>
+                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#productos">Productos</a>
                         </li>
                         <li>
                             <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#nosotros">Nosotros</a>
