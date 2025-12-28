@@ -25,7 +25,7 @@ export const Products = [
         category: 'Catering',
         title: 'Shots Dulces',
         price: '$35.000',
-        image: '/postres/shots-dulces.png',
+        image: '/catering/shots-dulces.png',
     },
     {
         id: 5,
