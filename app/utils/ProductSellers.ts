@@ -44,14 +44,14 @@ export const ProductSellers = [
     {
         id: 7,
         category: 'Catering',
-        title: 'Figazzas',
+        title: 'Figazzas x12u',
         price: '$20.000',
         image: '/catering/figazzas.png',
     },
     {
         id: 8,
         category: 'Catering',
-        title: 'Chips',
+        title: 'Chips x12u',
         price: '$20.000',
         image: '/catering/chips.png',
     },

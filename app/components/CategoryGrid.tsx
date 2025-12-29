@@ -29,15 +29,18 @@ export default function CategoriesGrid() {
                             className={`absolute inset-0 ${cat.overlayColor} group-hover:opacity-100 transition-opacity duration-300 opacity-80 md:opacity-0 md:group-hover:opacity-100
 `}
                         />
-
                         {/* Texto */}
-                        <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <h3 className="text-xl font-semibold">{cat.title}</h3>
+                        <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300"
+                        >
+                            <h3 className="text-2xl font-semibold text-center px-2">
+                                {cat.title}
+                            </h3>
                             {/* <p className="text-sm tracking-wide mt-1">
                                 {cat.count} PRODUCTOS
                             </p> */}
                         </div>
                     </div>
+
                 ))}
             </div>
         </section>
