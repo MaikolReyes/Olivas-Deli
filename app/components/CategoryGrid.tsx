@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { categories } from "../utils/Categories";
+import Link from "next/link";
 
 
 export default function CategoriesGrid() {
@@ -12,9 +13,10 @@ export default function CategoriesGrid() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {categories.map((cat) => (
-                    <div
+                    <Link
                         key={cat.id}
-                        className="group relative h-80 overflow-hidden cursor-pointer"
+                        href={`/categorias/${cat.slug}`}
+                        className="group relative h-80 overflow-hidden cursor-pointer block"
                     >
                         {/* Imagen */}
                         <Image
@@ -39,7 +41,7 @@ export default function CategoriesGrid() {
                                 {cat.count} PRODUCTOS
                             </p> */}
                         </div>
-                    </div>
+                    </Link>
 
                 ))}
             </div>

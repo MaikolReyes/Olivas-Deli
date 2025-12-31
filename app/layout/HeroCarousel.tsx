@@ -37,7 +37,7 @@ export default function HeroCarousel() {
             {/* Contenido fijo */}
             <div className="absolute inset-0 z-20 flex items-center justify-center text-white text-center px-4">
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-bold lg:w-2/4 mx-auto">
+                    <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold lg:w-2/4 mx-auto">
                         Productos Artesanales:
                         Catering, panificados, postres y más.
                     </h1>

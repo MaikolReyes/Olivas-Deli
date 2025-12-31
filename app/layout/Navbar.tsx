@@ -5,9 +5,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from "next/navigation";
+
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const pathname = usePathname();
+    const isHome = pathname === "/";
+
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -23,37 +29,75 @@ export default function Navbar() {
     return (
         <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
             <nav
-                className={`${scrolled
-                    ? 'bg-primary/95 backdrop-blur shadow'
-                    : 'bg-transparent'
-                    }`}
-            >
+                className={`
+    transition-all duration-300
+    ${isHome && !scrolled ? "bg-transparent" : "bg-primary/95 backdrop-blur shadow"}`}>
 
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between text-white">
 
 
-                    <a id='inicio'>
+                    <Link href="/">
                         <Image src="/logo-olivas.png" alt="Logo" width={80} height={50} className="scale-125 origin-left" />
-                    </a>
+                    </Link>
 
                     <ul className="hidden md:flex gap-8 text-sm font-secondary">
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#">Inicio</a>
+                            <Link className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="/">Inicio</Link>
+                        </li>
+                        <li className="relative group">
+                            <span
+                                className="cursor-pointer relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full"
+                            >
+                                Categorías
+                            </span>
+
+                            {/* Dropdown */}
+                            <ul className="absolute left-0 top-full mt-3 w-48 bg-white text-[#3a1d35] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <li>
+                                    <Link
+                                        href="/categorias/panificados"
+                                        className="block px-4 py-2 hover:bg-primary/10 rounded-t-lg"
+                                    >
+                                        Panificados
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/categorias/postres"
+                                        className="block px-4 py-2 hover:bg-primary/10"
+                                    >
+                                        Postres
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/categorias/box-especiales"
+                                        className="block px-4 py-2 hover:bg-primary/10"
+                                    >
+                                        Box especiales
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link
+                                        href="/categorias/catering"
+                                        className="block px-4 py-2 hover:bg-primary/10 rounded-b-lg"
+                                    >
+                                        Catering
+                                    </Link>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#categorias">Categorías</a>
+                            <Link className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="/#productos">Productos</Link>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#productos">Productos</a>
+                            <Link className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="/#nosotros">Nosotros</Link>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#nosotros">Nosotros</a>
+                            <Link className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="/#contacto">Contacto</Link>
                         </li>
                         <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#contacto">Contacto</a>
-                        </li>
-                        <li>
-                            <a className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="#preguntas">Preguntas frecuentes</a>
+                            <Link className="relative after:absolute after:left-0 after:-bottom-1 after:h-px after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full" href="/#preguntas">Preguntas frecuentes</Link>
                         </li>
                     </ul>
 
@@ -87,24 +131,41 @@ export default function Navbar() {
                             }`}
                     >
                         <ul className="flex flex-col gap-6 px-6 py-8 text-white font-secondary">
-                            {[
-                                ['Inicio', '#'],
-                                ['Productos', '#productos'],
-                                ['Categorías', '#categorias'],
-                                ['Nosotros', '#nosotros'],
-                                ['Contacto', '#contacto'],
-                                ['Preguntas frecuentes', '#preguntas'],
-                            ].map(([label, link]) => (
-                                <li key={label}>
-                                    <a
-                                        href={link}
-                                        onClick={() => setMenuOpen(false)}
-                                        className="block border-b border-white/20 pb-3 text-lg"
-                                    >
-                                        {label}
-                                    </a>
-                                </li>
-                            ))}
+                            <li>
+                                <Link href="/" onClick={() => setMenuOpen(false)}>
+                                    Inicio
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/#categorias" onClick={() => setMenuOpen(false)}>
+                                    Categorías
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/#productos" onClick={() => setMenuOpen(false)}>
+                                    Productos
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/#nosotros" onClick={() => setMenuOpen(false)}>
+                                    Nosotros
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/#contacto" onClick={() => setMenuOpen(false)}>
+                                    Contacto
+                                </Link>
+                            </li>
+
+                            <li>
+                                <Link href="/#preguntas" onClick={() => setMenuOpen(false)}>
+                                    Preguntas frecuentes
+                                </Link>
+                            </li>
                         </ul>
                         <div className="space-x-4 px-6 pb-6 flex justify-center">
                             <a href="https://www.instagram.com/olivas.deli/" target="_blank" rel="noopener noreferrer"
@@ -123,6 +184,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </nav>
-        </header>
+        </header >
     );
 }
