@@ -13,6 +13,7 @@ export default async function BestSeller() {
         .eq('is_active', true);
 
     if (!products || products.length === 0) return null;
+    
 
     return <BestSellerCarousel products={products as Product[]} />;
 }
