@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Lato, Montserrat, Open_Sans, Poppins } from "next/font/google";
 import Script from "next/script";
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
@@ -10,7 +11,6 @@ import Footer from "./layout/Footer";
 import "swiper/css/navigation";
 import "swiper/css";
 import "./globals.css";
-import Image from "next/image";
 
 config.autoAddCss = false;
 
@@ -98,13 +98,15 @@ export default function RootLayout({
       <body className="min-h-screen bg-linear-to-br from-[#f6eef5] via-white to-[#ede3ec]">
         {/* Fallback NoScript Meta Pixel */}
         <noscript>
-          <Image
+
+          <img
             height="1"
             width="1"
             style={{ display: "none" }}
             src="https://www.facebook.com/tr?id=2339855833200498&ev=PageView&noscript=1"
             alt=""
           />
+          
         </noscript>
 
         {/* Analytics */}

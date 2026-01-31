@@ -19,15 +19,15 @@ export default function HeroCarousel() {
             >
                 <SwiperSlide
                     className="bg-cover bg-center"
-                    style={{ backgroundImage: "url('/postres/tarta-frutillas.png')" }}
+                    style={{ backgroundImage: "url('/hero/tarta-frutillas.webp')" }}
                 />
                 <SwiperSlide
                     className="bg-cover bg-center"
-                    style={{ backgroundImage: "url('/postres/lemon-pie.png')" }}
+                    style={{ backgroundImage: "url('/hero/lemon-pie.webp')" }}
                 />
                 <SwiperSlide
                     className="bg-cover bg-center"
-                    style={{ backgroundImage: "url('/postres/tarta-brownie.png')" }}
+                    style={{ backgroundImage: "url('/hero/tarta-brownie.webp')" }}
                 />
             </Swiper>
 
