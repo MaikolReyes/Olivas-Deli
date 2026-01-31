@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ProductCard from "@/app/components/ProductCard";
-import { supabase } from "@/app/lib/supabase-client";
+import { createSupabaseServer } from "../../lib/supabase-server";
 interface Props {
     params: Promise<{
         slug: string;
@@ -26,6 +26,8 @@ PAGE
 ======================= */
 export default async function CategoryPage({ params }: Props) {
     const { slug } = await params;
+
+    const supabase = createSupabaseServer();
 
     const { data: category } = await supabase
         .from("categories")
