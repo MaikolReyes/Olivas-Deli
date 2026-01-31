@@ -56,6 +56,7 @@ export default async function CategoriesGrid() {
 
 
 
+
                         {/* Texto */}
                         <div className="absolute inset-0 flex flex-col items-center justify-center text-white opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
                             <h3 className="text-2xl font-semibold text-center px-2">
