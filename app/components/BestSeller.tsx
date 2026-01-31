@@ -1,8 +1,11 @@
-import { supabase } from '../lib/supabase';
 import BestSellerCarousel from './BestSellerCarousel';
 import { Product } from '@/types/product';
+import { createSupabaseServer } from "../lib/supabase-server";
 
 export default async function BestSeller() {
+
+    const supabase = createSupabaseServer();
+
     const { data: products } = await supabase
         .from('products')
         .select('*')

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import ProductCard from "@/app/components/ProductCard";
-import { supabase } from "@/app/lib/supabase";
+import { supabase } from "@/app/lib/supabase-client";
 interface Props {
     params: Promise<{
         slug: string;

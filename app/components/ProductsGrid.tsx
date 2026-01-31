@@ -1,8 +1,11 @@
-import { supabase } from '../lib/supabase';
+import { createSupabaseServer } from "../lib/supabase-server";
 import ProductCard from './ProductCard';
 import { Product } from '@/types/product';
 
 export default async function ProductsGrid() {
+
+    const supabase = createSupabaseServer();
+
     const { data: products } = await supabase
         .from('products')
         .select('*')

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Category } from "@/types/category";
-import { supabase } from "../lib/supabase";
+import { createSupabaseServer } from "../lib/supabase-server";
 
 export default async function CategoriesGrid() {
+
+    const supabase = createSupabaseServer();
     const { data: categories } = await supabase
         .from("categories_with_count")
         .select("*")
